@@ -1,0 +1,16 @@
+<aura:component controller="InsertCand" implements="force:appHostable,flexipage:availableForAllPageTypes"
+    access="global">
+    <aura:attribute name="Cname" type="String"></aura:attribute>
+    <aura:attribute name="CEmail" type="String"></aura:attribute>
+    <aura:attribute name="CPhone" type="String"></aura:attribute>
+
+    <div class="slds-p-around_medium lgc-bg">
+        <h1>Add New Candidate Record</h1>
+        <div>
+            <lightning:input name="CandidateName" value="{!v.Cname}" maxlength="50"></lightning:input>
+            <lightning:input name="Email" value="{!v.CEmail}"></lightning:input>
+            <lightning:input name="PhoneNumber" value="{!v.CPhone}"></lightning:input>
+        </div>
+        <lightning:button label="Save Record" onclick="{!c.SaveRecord}" class="slds-p-around_medium lgc-bg"></lightning:button>
+    </div>
+</aura:component>
